@@ -1,7 +1,5 @@
 import numpy as np
 import math
-import pdb
-
 
 ###################### Preprocessing ######################
 
@@ -138,6 +136,8 @@ def RMSE(test_set):
     finalValue = math.sqrt((1.0/n) * mySum)
     return finalValue, (float(number_of_wrong_preds) / float(n))
 
+
+print('Fitting and calculating RMSE & accuracy')
 rmse, accuracy = RMSE(test_set)
 print('Accuracy: ' + str(accuracy))
 print('RMSE: '  + str(rmse))
